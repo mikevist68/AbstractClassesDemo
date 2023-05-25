@@ -10,6 +10,9 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+
+
+
             /*
              * Todo follow all comments!! 
              */
@@ -31,17 +34,48 @@ namespace ConsoleUI
              * Only in the Motorcycle class will you override the virtual drive method
             */
 
-            // Create a list of Vehicle called vehicles
+            // Create a list of Vehicle called vehicles --done
 
             /*
              * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
              * 
              * Set the properties with object initializer syntax
              */
+            var sedan = new Car();
+            sedan.Make = "Ford";
+            sedan.Model = "Fusion";
+            sedan.Year = "2018";
+            sedan.HasTrunk = true;
 
+            var Harley = new Motorcycle();
+            Harley.Make = "Harley";
+            Harley.Model = "sportster";
+            Harley.Year = "2008";
+            Harley.HasSideCart = false;
+
+            Vehicle toyota = new Car();
+            toyota.Make = "Toyota";
+            toyota.Model = "Crown";
+            toyota.Year = "2024";
+
+            Vehicle porshe = new Car();
+            porshe.Make = "Porshe";
+            porshe.Model = "911 turbo";
+            porshe.Year = "2020";
+
+            var  vehicles = new List<Vehicle>() { porshe, toyota, Harley, sedan };
+
+            
+            foreach (var ride in vehicles) 
+            {
+                Console.WriteLine($" Make:{ride.Make} Model: {ride.Model} Year: {ride.Year}");
+            }
+            
             /*
              * Add the 4 vehicles to the list
              * Using a foreach loop iterate over each of the properties
+             * 
+             * 
              */
 
             // Call each of the drive methods for one car and one motorcycle
